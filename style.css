@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    header nav {
+      display: none;
+    }
+  
+    #mainContent h2 {
+      font-size: 2rem;
+    }
+  
+    #mainContent p {
+      font-size: 1rem;
+    }
+  }
+  
