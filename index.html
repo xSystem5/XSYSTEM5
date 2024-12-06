@@ -18,11 +18,11 @@
     <header class="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
       <h1 class="text-3xl font-bold tracking-wide text-gradient">xSystem5</h1>
       <!-- Botón del menú hamburguesa -->
-      <button id="menuToggle" class="md:hidden flex items-center justify-center w-10 h-10 bg-gray-700 rounded-lg focus:outline-none">
-        <span class="block w-6 h-0.5 bg-white mb-1"></span>
-        <span class="block w-6 h-0.5 bg-white mb-1"></span>
-        <span class="block w-6 h-0.5 bg-white"></span>
-      </button>
+      <button id="menuToggle" class="md:hidden flex items-center justify-center w-12 h-12 bg-gray-700 rounded-lg focus:outline-none">
+        <span id="line1" class="block w-8 h-1 bg-white mb-2 transition-transform"></span>
+        <span id="line2" class="block w-8 h-1 bg-white mb-2 transition-opacity"></span>
+        <span id="line3" class="block w-8 h-1 bg-white transition-transform"></span>
+      </button>      
       <!-- Menú de navegación (desktop) -->
       <nav class="hidden md:block">
         <ul class="flex gap-6">
