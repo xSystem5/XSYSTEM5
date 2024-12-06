@@ -70,6 +70,8 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
 menuToggle.addEventListener('click', () => {
+  menuIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
   mobileMenu.classList.toggle('hidden');
   gsap.fromTo(
     mobileMenu,
