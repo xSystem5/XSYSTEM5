@@ -13,13 +13,10 @@ body {
     header nav {
       display: none;
     }
+  }
   
-    #mainContent h2 {
-      font-size: 2rem;
-    }
-  
-    #mainContent p {
-      font-size: 1rem;
-    }
+  #mobileMenu ul li a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
   }
   
