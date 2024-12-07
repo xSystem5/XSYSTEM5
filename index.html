@@ -16,7 +16,7 @@
 
     <!-- Encabezado con menú hamburguesa -->
     <header class="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
-      <h1 class="text-3xl font-bold tracking-wide text-gradient">xSystem5</h1>
+      <img src="assets/images/Logonombre.png" alt="Logo de xSystem5" class="w-32">
       <!-- Botón del menú hamburguesa -->
       <button id="menuToggle" class="md:hidden flex items-center justify-center w-10 h-10 bg-gray-700 rounded-lg focus:outline-none">
         <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,12 +94,51 @@
     <div class="container mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold text-gradient">Contacto</h3>
       <p class="mt-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-      <button class="px-6 py-3 bg-blue-500 text-white text-lg rounded-lg shadow-md hover:bg-blue-400 transition mt-6">
+      <button id="messageButton" class="px-6 py-3 bg-blue-500 text-white text-lg rounded-lg shadow-md hover:bg-blue-400 transition mt-6">
         Enviar Mensaje
       </button>
     </div>
-  </section>
 
+    <!-- Ventana emergente con redes sociales -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <div id="popupContent" class="bg-gray-800 text-white p-6 rounded-lg shadow-lg w-80 text-center transform scale-50 opacity-0 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-4">Elige una opción</h3>
+        <div class="flex flex-col gap-4">
+          <!-- Botón Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61569764384239" target="_blank" class="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition">
+            Facebook
+          </a>
+          <!-- Botón Instagram -->
+          <a href="https://www.instagram.com/xsystem_5/" target="_blank" class="px-4 py-2 bg-pink-500 rounded-lg hover:bg-pink-400 transition">
+            Instagram
+          </a>
+          <!-- Botón Correo -->
+          <button id="emailButton" class="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition">
+            Correo Electrónico
+          </button>
+        </div>
+        <button id="closePopup" class="mt-4 text-gray-400 hover:text-white">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <form id="contactForm" action="https://formspree.io/f/mwpkjkow" method="POST" class="mt-6 bg-gray-700 p-6 rounded-lg shadow-lg max-w-md mx-auto hidden">
+      <label for="email" class="block text-sm font-medium text-white mb-2">Tu Correo Electrónico:</label>
+      <input type="email" id="email" name="_replyto" placeholder="tu-email@example.com" required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"/>
+
+      <label for="message" class="block text-sm font-medium text-white mb-2">Tu Mensaje:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"></textarea>
+
+      <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition">
+        Enviar Mensaje
+      </button>
+    </form>
+
+    <!-- Mensaje de confirmación (oculto inicialmente) -->
+    <div id="successMessage" class="hidden mt-6 bg-green-500 text-white p-4 rounded-lg">
+      ¡Tu mensaje ha sido enviado con éxito!
+    </div>
+  </section>
   <script src="scripts.js"></script>
 </body>
 </html>

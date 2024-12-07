@@ -79,3 +79,69 @@ menuToggle.addEventListener('click', () => {
     { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
   );
 });
+
+// Mostrar las opciones del popup (redes sociales)
+  document.getElementById('messageButton').addEventListener('click', function() {
+    const popup = document.getElementById('popup');
+    const popupContent = document.getElementById('popupContent');
+    popup.classList.remove('hidden');
+    setTimeout(() => {
+      popupContent.classList.remove('scale-50', 'opacity-0');
+      popupContent.classList.add('scale-100', 'opacity-100');
+    }, 10); // Se necesita un pequeño retraso para aplicar la animación
+});
+
+// Cerrar el popup
+  document.getElementById('closePopup').addEventListener('click', function() {
+    const popupContent = document.getElementById('popupContent');
+    popupContent.classList.remove('scale-100', 'opacity-100');
+    popupContent.classList.add('scale-50', 'opacity-0');
+    setTimeout(() => {
+      document.getElementById('popup').classList.add('hidden');
+    }, 300); // Esperar a que termine la animación
+});
+
+// Mostrar formulario de contacto al hacer clic en "Correo Electrónico"
+  document.getElementById('emailButton').addEventListener('click', function() {
+    document.getElementById('contactForm').classList.remove('hidden');
+    document.getElementById('popup').classList.add('hidden');
+    document.getElementById('messageButton').classList.add('hidden');
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+
+  // Verificar datos del formulario antes de enviarlos
+  const formData = new FormData(this);
+  formData.forEach((value, key) => {
+    console.log(key, value); // Imprime los datos del formulario
+  });
+
+  // Enviar el formulario a través de fetch
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+  })
+  .then(function(response) {
+    if (response.ok || response.status === 202) {
+      // Correo enviado con éxito
+      document.getElementById('successMessage').classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+      document.getElementById('contactForm').classList.add('hidden');
+    } else {
+      // Verificar el cuerpo de la respuesta para más detalles
+      response.json().then((data) => {
+        console.error('Error detallado:', data);
+        alert('Hubo un problema al enviar el formulario.');
+      });
+    }
+  })
+  .catch(function(error) {
+    console.error('Error al enviar el formulario:', error); // Imprime el error
+    alert('Hubo un problema al enviar el formulario.');
+  });
+});
+
+
+
+
