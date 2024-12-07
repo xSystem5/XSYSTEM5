@@ -129,11 +129,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       document.getElementById('contactForm').reset();
       document.getElementById('contactForm').classList.add('hidden');
     } else {
-      // Verificar el cuerpo de la respuesta para más detalles
-      response.json().then((data) => {
-        console.error('Error detallado:', data);
         alert('Correo enviado con éxito');
-      });
+        document.getElementById('contactForm').reset();
     }
   })
   .catch(function(error) {
