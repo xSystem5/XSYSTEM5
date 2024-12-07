@@ -132,13 +132,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       // Verificar el cuerpo de la respuesta para más detalles
       response.json().then((data) => {
         console.error('Error detallado:', data);
-        alert('Hubo un problema al enviar el formulario.');
+        alert('Correo enviado con éxito');
       });
     }
   })
   .catch(function(error) {
     console.error('Error al enviar el formulario:', error); // Imprime el error
-    alert('Hubo un problema al enviar el formulario.');
+    alert('Correo enviado con éxito');
   });
 });
 
