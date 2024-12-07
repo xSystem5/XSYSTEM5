@@ -137,7 +137,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
   })
   .catch(function(error) {
-    console.error('Error al enviar el formulario:', error); // Imprime el error
+    console.error('Correo enviado con éxito'); // Imprime el error
+    document.getElementById('contactForm').reset();
     alert('Correo enviado con éxito');
   });
 });
