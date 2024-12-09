@@ -80,26 +80,45 @@ menuToggle.addEventListener('click', () => {
   );
 });
 
-// Mostrar las opciones del popup (redes sociales)
-  document.getElementById('messageButton').addEventListener('click', function() {
-    const popup = document.getElementById('popup');
-    const popupContent = document.getElementById('popupContent');
-    popup.classList.remove('hidden');
-    setTimeout(() => {
-      popupContent.classList.remove('scale-50', 'opacity-0');
-      popupContent.classList.add('scale-100', 'opacity-100');
-    }, 10); // Se necesita un pequeño retraso para aplicar la animación
+document.getElementById('messageButton').addEventListener('click', function(event) {
+  const popup = document.getElementById('popup');
+  const popupContent = document.getElementById('popupContent');
+
+  // Obtener las coordenadas del botón
+  const rect = event.target.getBoundingClientRect();
+
+  // Calcular las coordenadas para centrar el popup
+  const popupWidth = popupContent.offsetWidth;
+  const popupHeight = popupContent.offsetHeight;
+
+  // Calcular la posición del popup
+  const left = rect.left + window.scrollX + (rect.width / 2) - (popupWidth / 2);
+  const top = rect.bottom + window.scrollY + 10; // Un pequeño margen hacia abajo
+
+  // Establecer las coordenadas del popup
+  popup.style.left = `${left}px`;
+  popup.style.top = `${top}px`;
+
+  // Mostrar el popup con animación
+  popup.classList.remove('hidden');
+  setTimeout(() => {
+    popupContent.classList.remove('scale-50', 'opacity-0');
+    popupContent.classList.add('scale-100', 'opacity-100');
+  }, 10);
 });
 
-// Cerrar el popup
-  document.getElementById('closePopup').addEventListener('click', function() {
-    const popupContent = document.getElementById('popupContent');
-    popupContent.classList.remove('scale-100', 'opacity-100');
-    popupContent.classList.add('scale-50', 'opacity-0');
-    setTimeout(() => {
-      document.getElementById('popup').classList.add('hidden');
-    }, 300); // Esperar a que termine la animación
+document.getElementById('closePopup').addEventListener('click', function() {
+  const popup = document.getElementById('popup');
+  const popupContent = document.getElementById('popupContent');
+
+  // Ocultar el popup con animación
+  popupContent.classList.remove('scale-100', 'opacity-100');
+  popupContent.classList.add('scale-50', 'opacity-0');
+  setTimeout(() => {
+    popup.classList.add('hidden');
+  }, 300);
 });
+
 
 // Servicios
 function toggleServiceForm(service) {
