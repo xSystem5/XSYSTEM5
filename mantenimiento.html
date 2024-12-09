@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes de Mantenimiento | xSystem5</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white"> 
+  <!-- Encabezado -->
+  <header class="w-full bg-gray-800 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="index.html">
+        <img src="assets/images/Logonombre.png" alt="Logo de xSystem5" class="w-32">
+      </a>
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="index.html" class="hover:text-blue-400">Inicio</a></li>
+          <li><a href="#maintenance" class="hover:text-blue-400">Mantenimiento</a></li>
+          <li><a href="#contact" class="hover:text-blue-400">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección Paquetes de Mantenimiento -->
+  <section id="maintenance" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-yellow-400">Paquetes de Mantenimiento</h2>
+      <p class="text-lg mb-12">
+        Optimización continua y soporte técnico para mantener tu sistema siempre actualizado.
+      </p>
+
+      <!-- Paquetes de Mantenimiento -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Paquete Básico de Mantenimiento -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-4 text-blue-400">Paquete Básico</h3>
+          <ul class="list-disc pl-6 text-left mb-4 space-y-2">
+            <li>Mantenimiento de un sitio web básico.</li>
+            <li>Actualizaciones periódicas.</li>
+            <li>Soporte técnico básico durante el mes.</li>
+          </ul>
+          <p class="text-xl font-bold text-blue-400 mb-4">Precio: $3,000 MXN/mes</p>
+          <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-400 transition">
+            Solicitar Información
+          </button>
+        </div>
+
+        <!-- Paquete Avanzado de Mantenimiento -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-4 text-green-400">Paquete Avanzado</h3>
+          <ul class="list-disc pl-6 text-left mb-4 space-y-2">
+            <li>Optimización de rendimiento.</li>
+            <li>Mejoras continuas de seguridad.</li>
+            <li>Soporte técnico avanzado y mantenimiento proactivo.</li>
+          </ul>
+          <p class="text-xl font-bold text-green-400 mb-4">Precio: $7,000 MXN/mes</p>
+          <button class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-400 transition">
+            Solicitar Información
+          </button>
+        </div>
+
+        <!-- Paquete Custom de Mantenimiento -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-4 text-red-400">Paquete Custom</h3>
+          <ul class="list-disc pl-6 text-left mb-4 space-y-2">
+            <li>Mantenimiento a medida según los requerimientos del cliente.</li>
+            <li>Soluciones personalizadas y soporte integral.</li>
+            <li>Opciones de optimización avanzadas.</li>
+          </ul>
+          <p class="text-xl font-bold text-red-400 mb-4">Precio: Cotización personalizada</p>
+          <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400 transition">
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6 text-center text-blue-400">Contacto</h3>
+      <form id="contactForm" action="https://formspree.io/f/mwpkjkow" method="POST" class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+        <label for="email" class="block text-sm font-medium text-white mb-2">Tu Correo Electrónico:</label>
+        <input type="email" id="email" name="_replyto" placeholder="tu-email@example.com" required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"/>
+
+        <label for="message" class="block text-sm font-medium text-white mb-2">Tu Mensaje:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"></textarea>
+
+        <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition">
+          Enviar Mensaje
+        </button>
+      </form>
+
+      <!-- Mensaje de confirmación -->
+      <div id="successMessage" class="hidden mt-6 bg-green-500 text-white p-4 rounded-lg text-center">
+        ¡Tu mensaje ha sido enviado con éxito!
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2024 xSystem5. Todos los derechos reservados.</p>
+      <p class="text-sm">
+        <a href="#" class="text-blue-400 hover:text-blue-300">Política de Privacidad</a> | 
+        <a href="#" class="text-blue-400 hover:text-blue-300">Términos y Condiciones</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.target;
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById("successMessage").classList.remove("hidden");
+        } else {
+          alert("Ocurrió un problema al enviar el mensaje. Intenta de nuevo.");
+        }
+      })
+      .catch(error => {
+        console.error("Error al enviar el formulario:", error);
+        alert("Ocurrió un error inesperado. Por favor, intenta más tarde.");
+      });
+    });
+  </script>
+</body>
+</html>
