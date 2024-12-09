@@ -1,0 +1,43 @@
+/* styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    header nav {
+      display: none;
+    }
+  }
+  
+  #mobileMenu ul li a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  #popup a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+
+/* styles.css */
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Comienza ligeramente por encima */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+
+body {
+  animation: fadeInMove 2s ease-out forwards;
+}

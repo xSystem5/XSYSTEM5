@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>xSystem5</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xSystem5</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
 <body class="bg-gray-900 text-white overflow-x-hidden">
   <!-- Contenedor Principal -->
   <div class="relative h-screen overflow-hidden">
@@ -25,7 +25,7 @@
         <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
-      </button>      
+      </button>
       <!-- Menú de navegación (desktop) -->
       <nav class="hidden md:block">
         <ul class="flex gap-6">
@@ -58,88 +58,89 @@
     </div>
   </div>
 
-<!-- Sección Servicios -->
-<section id="services" class="py-20 bg-gray-800">
-  <div class="container mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold text-gradient">Nuestros Servicios</h3>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Servicio 1: Desarrollo Web -->
-      <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
-        <h4 class="text-xl font-semibold mb-2">Desarrollo Web</h4>
-        <p>Diseñamos sitios web atractivos y funcionales.</p>
-        <!-- Botón para ver detalles -->
-        <button class="text-white mt-4" onclick="toggleDetails('web-details')">Ver Detalles</button>
+  <!-- Sección Servicios -->
+  <section id="services" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-gradient">Nuestros Servicios</h3>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Servicio 1: Desarrollo Web -->
+        <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Desarrollo Web</h4>
+          <p>Diseñamos sitios web atractivos y funcionales.</p>
+          <!-- Botón para ver detalles -->
+          <a href="web-basic.html" class="text-white mt-4">Ver Detalles</a>
 
-        <!-- Detalles del paquete de Desarrollo Web (inicialmente ocultos) -->
-        <div id="web-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
-          <h5 class="font-semibold">Paquetes para Desarrollo Web</h5>
-          <ul>
-            <li><strong>Paquete Básico</strong>: $8,000 MXN - Sitio web básico, 5 páginas, diseño responsive.</li>
-            <li><strong>Paquete Avanzado</strong>: $18,000 MXN - Incluye funcionalidades avanzadas, diseño personalizado y SEO básico.</li>
-            <li><strong>Paquete Experto</strong>: $40,000 MXN - Todo lo anterior más integración con herramientas externas, e-commerce, y soporte continuo.</li>
-            <li><strong>Paquete Custom</strong>: Precio personalizado - Paquete hecho a medida según las necesidades del cliente.</li>
-          </ul>
+
+          <!-- Detalles del paquete de Desarrollo Web (inicialmente ocultos) -->
+          <div id="web-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
+            <h5 class="font-semibold">Paquetes para Desarrollo Web</h5>
+            <ul>
+              <li><strong>Paquete Básico</strong>: $8,000 MXN - Sitio web básico, 5 páginas, diseño responsive.</li>
+              <li><strong>Paquete Avanzado</strong>: $18,000 MXN - Incluye funcionalidades avanzadas, diseño personalizado y SEO básico.</li>
+              <li><strong>Paquete Experto</strong>: $40,000 MXN - Todo lo anterior más integración con herramientas externas, e-commerce, y soporte continuo.</li>
+              <li><strong>Paquete Custom</strong>: Precio personalizado - Paquete hecho a medida según las necesidades del cliente.</li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <!-- Servicio 2: Software a Medida -->
-      <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
-        <h4 class="text-xl font-semibold mb-2">Software a Medida</h4>
-        <p>Soluciones personalizadas para tu negocio.</p>
-        <!-- Botón para ver detalles -->
-        <button class="text-white mt-4" onclick="toggleDetails('software-details')">Ver Detalles</button>
+        <!-- Servicio 2: Software a Medida -->
+        <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Software a Medida</h4>
+          <p>Soluciones personalizadas para tu negocio.</p>
+          <!-- Botón para ver detalles -->
+          <button class="text-white mt-4" onclick="toggleDetails('software-details')">Ver Detalles</button>
 
-        <!-- Detalles del paquete de Software a Medida (inicialmente ocultos) -->
-        <div id="software-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
-          <h5 class="font-semibold">Paquetes para Software a Medida</h5>
-          <ul>
-            <li><strong>Paquete Básico</strong>: $10,000 MXN - Software personalizado básico para pequeños procesos.</li>
-            <li><strong>Paquete Avanzado</strong>: $25,000 MXN - Incluye más funcionalidades y procesos integrados.</li>
-            <li><strong>Paquete Experto</strong>: $60,000 MXN - Solución completa y robusta para grandes empresas, con integración a múltiples plataformas.</li>
-            <li><strong>Paquete Custom</strong>: Precio personalizado - Software completamente adaptado a las necesidades del cliente.</li>
-          </ul>
+          <!-- Detalles del paquete de Software a Medida (inicialmente ocultos) -->
+          <div id="software-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
+            <h5 class="font-semibold">Paquetes para Software a Medida</h5>
+            <ul>
+              <li><strong>Paquete Básico</strong>: $10,000 MXN - Software personalizado básico para pequeños procesos.</li>
+              <li><strong>Paquete Avanzado</strong>: $25,000 MXN - Incluye más funcionalidades y procesos integrados.</li>
+              <li><strong>Paquete Experto</strong>: $60,000 MXN - Solución completa y robusta para grandes empresas, con integración a múltiples plataformas.</li>
+              <li><strong>Paquete Custom</strong>: Precio personalizado - Software completamente adaptado a las necesidades del cliente.</li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <!-- Servicio 3: Mantenimiento -->
-      <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
-        <h4 class="text-xl font-semibold mb-2">Mantenimiento</h4>
-        <p>Optimización y soporte técnico continuo.</p>
-        <!-- Botón para ver detalles -->
-        <button class="text-white mt-4" onclick="toggleDetails('maintenance-details')">Ver Detalles</button>
+        <!-- Servicio 3: Mantenimiento -->
+        <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Mantenimiento</h4>
+          <p>Optimización y soporte técnico continuo.</p>
+          <!-- Botón para ver detalles -->
+          <button class="text-white mt-4" onclick="toggleDetails('maintenance-details')">Ver Detalles</button>
 
-        <!-- Detalles del paquete de Mantenimiento (inicialmente ocultos) -->
-        <div id="maintenance-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
-          <h5 class="font-semibold">Paquetes para Mantenimiento</h5>
-          <ul>
-            <li><strong>Paquete Básico</strong>: $3,000 MXN/mes - Mantenimiento de un sitio web básico, actualizaciones periódicas.</li>
-            <li><strong>Paquete Avanzado</strong>: $7,000 MXN/mes - Incluye optimización de rendimiento, seguridad y mejoras continuas.</li>
-            <li><strong>Paquete Custom</strong>: Precio personalizado - Mantenimiento a medida según los requerimientos del cliente.</li>
-          </ul>
+          <!-- Detalles del paquete de Mantenimiento (inicialmente ocultos) -->
+          <div id="maintenance-details" class="mt-4 hidden text-white text-left transition-all max-h-0 overflow-hidden">
+            <h5 class="font-semibold">Paquetes para Mantenimiento</h5>
+            <ul>
+              <li><strong>Paquete Básico</strong>: $3,000 MXN/mes - Mantenimiento de un sitio web básico, actualizaciones periódicas.</li>
+              <li><strong>Paquete Avanzado</strong>: $7,000 MXN/mes - Incluye optimización de rendimiento, seguridad y mejoras continuas.</li>
+              <li><strong>Paquete Custom</strong>: Precio personalizado - Mantenimiento a medida según los requerimientos del cliente.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<script>
-  function toggleDetails(service) {
-    const serviceDetails = document.getElementById(service);
-    
-    // Si el servicio ya está visible, lo ocultamos
-    if (serviceDetails.classList.contains('max-h-0')) {
-      serviceDetails.classList.remove('max-h-0');
-      serviceDetails.classList.add('max-h-screen');
-      serviceDetails.classList.remove('hidden');
-    } else {
-      // Si el servicio está visible, lo ocultamos con animación
-      serviceDetails.classList.add('max-h-0');
-      serviceDetails.classList.remove('max-h-screen');
-      setTimeout(() => serviceDetails.classList.add('hidden'), 600); // Retardar el ocultamiento para que la animación se vea
+  <script>
+    function toggleDetails(service) {
+      const serviceDetails = document.getElementById(service);
+      
+      // Si el servicio ya está visible, lo ocultamos
+      if (serviceDetails.classList.contains('max-h-0')) {
+        serviceDetails.classList.remove('max-h-0');
+        serviceDetails.classList.add('max-h-screen');
+        serviceDetails.classList.remove('hidden');
+      } else {
+        // Si el servicio está visible, lo ocultamos con animación
+        serviceDetails.classList.add('max-h-0');
+        serviceDetails.classList.remove('max-h-screen');
+        setTimeout(() => serviceDetails.classList.add('hidden'), 600); // Retardar el ocultamiento para que la animación se vea
+      }
     }
-  }
-</script>
+  </script>
 
   <!-- Sección Nosotros -->
   <section id="about" class="py-20 bg-gray-900">
@@ -155,10 +156,10 @@
   <section id="contact" class="py-20 bg-gray-800">
     <div class="container mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold text-gradient">Contacto</h3>
-      <p class="mt-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
       <button id="messageButton" class="px-6 py-3 bg-blue-500 text-white text-lg rounded-lg shadow-md hover:bg-blue-400 transition mt-6">
-        Enviar Mensaje
+        Nuestras redes sociales
       </button>
+      <p class="mt-4">¿Tienes un proyecto en mente? ¡Hablemos!</p>
     </div>
 
     <!-- Ventana emergente con redes sociales -->
@@ -174,33 +175,57 @@
           <a href="https://www.instagram.com/xsystem_5/" target="_blank" class="px-4 py-2 bg-pink-500 rounded-lg hover:bg-pink-400 transition">
             Instagram
           </a>
-          <!-- Botón Correo -->
-          <button id="emailButton" class="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition">
-            Correo Electrónico
-          </button>
         </div>
         <button id="closePopup" class="mt-4 text-gray-400 hover:text-white">Cerrar</button>
       </div>
     </div>
 
     <!-- Formulario -->
-    <form id="contactForm" action="https://formspree.io/f/mwpkjkow" method="POST" class="mt-6 bg-gray-700 p-6 rounded-lg shadow-lg max-w-md mx-auto hidden">
+    <form id="contactForm" action="https://formspree.io/f/mwpkjkow" method="POST" class="mt-6 bg-gray-700 p-6 rounded-lg shadow-lg max-w-md mx-auto">
       <label for="email" class="block text-sm font-medium text-white mb-2">Tu Correo Electrónico:</label>
       <input type="email" id="email" name="_replyto" placeholder="tu-email@example.com" required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"/>
-
+    
       <label for="message" class="block text-sm font-medium text-white mb-2">Tu Mensaje:</label>
       <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required class="w-full px-4 py-2 mb-4 border rounded-lg text-gray-900"></textarea>
-
+    
       <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition">
         Enviar Mensaje
       </button>
     </form>
-
-    <!-- Mensaje de confirmación (oculto inicialmente) -->
+    
+    <!-- Mensaje de confirmación -->
     <div id="successMessage" class="hidden mt-6 bg-green-500 text-white p-4 rounded-lg">
       ¡Tu mensaje ha sido enviado con éxito!
     </div>
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Evitar el envío normal del formulario
+      const form = event.target;
+    
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset(); // Limpiar el formulario
+          document.getElementById("successMessage").classList.remove("hidden"); // Mostrar mensaje de éxito
+        } else {
+          alert("Ocurrió un problema al enviar el mensaje. Intenta de nuevo.");
+        }
+      })
+      .catch(error => {
+        console.error("Error al enviar el formulario:", error);
+        alert("Ocurrió un error inesperado. Por favor, intenta más tarde.");
+      });
+    });
+    </script>
   </section>
+  <script src="scripts.js"></script>
+</body>
   <!-- Pie de Página -->
   <footer class="bg-gray-900 text-white py-8">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -242,6 +267,4 @@
       </p>
     </div>
   </footer>
-  <script src="scripts.js"></script>
-</body>
 </html>

@@ -101,44 +101,16 @@ menuToggle.addEventListener('click', () => {
     }, 300); // Esperar a que termine la animación
 });
 
-// Mostrar formulario de contacto al hacer clic en "Correo Electrónico"
-  document.getElementById('emailButton').addEventListener('click', function() {
-    document.getElementById('contactForm').classList.remove('hidden');
-    document.getElementById('popup').classList.add('hidden');
-    document.getElementById('messageButton').classList.add('hidden');
-});
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
-
-  // Verificar datos del formulario antes de enviarlos
-  const formData = new FormData(this);
-  formData.forEach((value, key) => {
-    console.log(key, value); // Imprime los datos del formulario
-  });
-
-  // Enviar el formulario a través de fetch
-  fetch(this.action, {
-    method: 'POST',
-    body: formData,
-  })
-  .then(function(response) {
-    if (response.ok || response.status === 202) {
-      // Correo enviado con éxito
-      document.getElementById('successMessage').classList.remove('hidden');
-      document.getElementById('contactForm').reset();
-      document.getElementById('contactForm').classList.add('hidden');
-    } else {
-        alert('Correo enviado con éxito');
-        document.getElementById('contactForm').reset();
-    }
-  })
-  .catch(function(error) {
-    console.error('Correo enviado con éxito'); // Imprime el error
-    document.getElementById('contactForm').reset();
-    alert('Correo enviado con éxito');
-  });
-});
+// Servicios
+function toggleServiceForm(service) {
+  // Esconder todos los formularios primero
+  const forms = document.querySelectorAll('.hidden');
+  forms.forEach(form => form.classList.add('hidden'));
+  
+  // Mostrar el formulario correspondiente al servicio seleccionado
+  const formToShow = document.getElementById(`${service}-form`);
+  formToShow.classList.remove('hidden');
+}
 
 
 
